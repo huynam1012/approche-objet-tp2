@@ -14,7 +14,16 @@ public class TestPersonne {
 		Personne pers1 = new Personne("MARTIN", "Paul", adr1);
 				
 		Personne pers2 = new Personne("DUPONT", "Anne", adr2);
-
+		
+		pers1.AfficherNomPrenom();
+		pers1.ModifiedNom("Tran"); //add new name
+		pers1.GetNom();
+		pers1.AfficherNomPrenom();
+		pers1.GetAdresse();
+		pers1.SetAdresse(adr1);
+		
+		pers2.AfficherNomPrenom();
+		pers2.GetAdresse();
+		
 	}
-
 }
