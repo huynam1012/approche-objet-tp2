@@ -15,5 +15,19 @@ public class Compte {
 	public String toString() {
 		return "Votre compte " + numeroCompte + " restre " + soldeCompte + "€";
 	}
-			
+	
+	
+	public String getNumeroCompte() {
+		return numeroCompte;
+	}
+	public void setNumeroCompte(String numeroCompte) {
+		this.numeroCompte = numeroCompte;
+	}
+	public double getSoldeCompte() {
+		return soldeCompte;
+	}
+	public void setSoldeCompte(double soldeCompte) {
+		this.soldeCompte = soldeCompte;
+	}
+	
 }
