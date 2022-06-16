@@ -49,6 +49,7 @@ public class Rectangle implements ObjetGeometrique {
 		this.largueur = largueur;
 	}
 	
+	
 
 
 

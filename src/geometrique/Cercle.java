@@ -26,4 +26,13 @@ public class Cercle implements ObjetGeometrique {
 		this.rayon = rayon;
 	}
 
+	/**
+	 @Override
+	public String toString() {
+		return "Cercle [rayon=" + rayon + ", toString()=" + super.toString() + "]";
+	}
+	*/
+	
+	
+
 }

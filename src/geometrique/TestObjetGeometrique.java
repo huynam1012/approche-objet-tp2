@@ -8,7 +8,7 @@ public class TestObjetGeometrique {
 		ObjetGeometrique[] objetsGeometriques = new ObjetGeometrique[2];
 
 		objetsGeometriques[0] = new Cercle(5.3);
-		objetsGeometriques[1] = new Rectangle(8.2, 9.3);
+		objetsGeometriques[1] = new Rectangle(5.0, 4.0);
 
 		for (int i = 0; i < objetsGeometriques.length; i++) {
 			ObjetGeometrique objetGeometriqueActuel = objetsGeometriques[i];
