@@ -1,13 +1,13 @@
 package geometrique;
 
 public class Rectangle implements ObjetGeometrique {
-	
+
 	private double longueur;
 	private double largueur;
-	
+
 	@Override
 	public double perimetre() {
-		return longueur + largueur;
+		return (longueur + largueur)*2;
 	}
 
 	@Override
@@ -18,6 +18,11 @@ public class Rectangle implements ObjetGeometrique {
 	public double getLongueur() {
 		return longueur;
 	}
+	
+	/** Setter
+	 * 
+	 * @param longueur
+	 */
 
 	public void setLongueur(double longueur) {
 		this.longueur = longueur;
@@ -30,11 +35,21 @@ public class Rectangle implements ObjetGeometrique {
 	public void setLargueur(double largueur) {
 		this.largueur = largueur;
 	}
+	
+	/** Constructeur
+	 * 
+	 * @param longueur
+	 * @param largueur
+	 */
+
 
 	public Rectangle(double longueur, double largueur) {
+		super();
 		this.longueur = longueur;
 		this.largueur = largueur;
 	}
+	
+
 
 
 }

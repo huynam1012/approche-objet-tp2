@@ -1,13 +1,13 @@
 package geometrique;
 
 public class Cercle implements ObjetGeometrique {
-	
+
 	private double rayon;
 
 	public double perimetre() {
 		return Math.PI * rayon * 2;
 	}
-	
+
 	@Override
 	public double surface() {
 		return Math.PI * rayon * rayon;
@@ -26,6 +26,4 @@ public class Cercle implements ObjetGeometrique {
 		this.rayon = rayon;
 	}
 
-
-	
 }
