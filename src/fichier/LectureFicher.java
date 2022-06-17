@@ -1,0 +1,47 @@
+package fichier;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
+
+public class LectureFicher {
+	
+public static void main(String[] args) throws IOException {
+		
+		List<Ville> villes = new ArrayList<>();
+
+		Path path = Paths.get(
+				"E:\\Java diginamic\\20220616\\recensement.csv");
+		
+		if (Files.exists(path)) {
+			List<String> content = Files.readAllLines(path, StandardCharsets.UTF_8);
+			content.remove(0);
+			
+			for (String line : content) {
+
+				String[] data = line.split(";");
+				villes.add(new Ville(data[6], data[2], data[1], Integer.parseInt(data[9].replace(" ", ""))));
+			}
+		}
+		
+		Path targetPath = Paths.get(
+				"E:\\Java diginamic\\20220616\\recensement.csv");
+		
+		List<String> grandesVillesData = new ArrayList<>();
+		for (Ville ville : villes) {
+			if (ville.getPopTotale() >= 25000) {
+				grandesVillesData.add(ville.getData());
+				
+			}
+		}
+		grandesVillesData.add(0, "Commune;Numero de Departement;Region;Population totale");
+		Files.write(targetPath, grandesVillesData, StandardOpenOption.CREATE);
+
+	}
+
+}
