@@ -14,21 +14,29 @@ public class CreerFichier {
 	public static void main(String[] args) throws IOException {
 
 		// lecture
-		Path path = Paths.get(
-				"E:\\Java diginamic\\20220616\\recensement.csv");
+		Path pathFile = Paths.get("E:/Java diginamic/20220616/recensement_origin.csv");
 
-		if (!Files.exists(path)) {
-			System.err.println("le fichier n existe pas");
+		if (!Files.exists(pathFile)) {
+			System.err.println("le fichier n'existe pas");
 			return;
 		}
-		List<String> content = Files.readAllLines(path, StandardCharsets.UTF_8);
+		List<String> content = Files.readAllLines(pathFile, StandardCharsets.UTF_8);
+
+		List<String> selectedLines = new ArrayList<>();
+		for (int i = 0; i < 5; /** Math.min(100, content.size()); */
+				i++) {
+			String string = content.get(i);
+			selectedLines.add(string);
+			System.out.println(string);
+
+		}
 
 		// ecriture
-		Path targetPath = Paths.get(
-				"E:\\Java diginamic\\20220616\\recensement.csv");
+		Path targetPath = Paths.get("E:/Java diginamic/20220616/recensement_new.csv");
 
 		List<String> selectedContent = new ArrayList<>();
-		for (int i = 0; i < Math.min(100, content.size()); i++) {
+		for (int i = 0; i < 100; /** Math.min(100, content.size()); */
+				i++) {
 			String string = content.get(i);
 			selectedContent.add(string);
 

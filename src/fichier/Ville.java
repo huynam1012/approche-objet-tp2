@@ -1,7 +1,7 @@
 package fichier;
 
 public class Ville {
-	
+
 	private String nom;
 	private String codeDepartement;
 	private String nomRegion;
@@ -82,7 +82,5 @@ public class Ville {
 	public void setPopTotale(int popTotale) {
 		this.popTotale = popTotale;
 	}
-
-
 
 }
