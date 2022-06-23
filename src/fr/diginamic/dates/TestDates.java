@@ -5,6 +5,9 @@ import java.util.Date;
 
 public class TestDates {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		Date today = new Date();
