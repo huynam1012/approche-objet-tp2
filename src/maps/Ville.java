@@ -1,5 +1,5 @@
 package maps;
-
+import java.util.Objects;
 public class Ville implements Comparable<Ville> {
 
 	private String nom;
@@ -19,6 +19,15 @@ public class Ville implements Comparable<Ville> {
 		this.nom = nom;
 		this.nbHabitants = nbHabitants;
 		this.departement = departement;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Ville)) {
+			return false;
+		}
+		Ville other = (Ville) obj;
+		return Objects.equals(nom, other.nom) && nbHabitants == other.nbHabitants;
 	}
 
 	public int compareTo(Ville autre) {
